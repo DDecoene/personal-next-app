@@ -16,7 +16,9 @@ export function Layout({ children, title = '' }: Props) {
       <Box minH={'80vh'}>
         <main>{children}</main>
       </Box>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </>
   )
 }
