@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import { Layout } from "../components";
+import { Layout } from "@components";
 
 export default function AboutPage() {
   return (

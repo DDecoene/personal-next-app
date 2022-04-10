@@ -1,7 +1,7 @@
 import { Container, Flex, Heading, Icon, SimpleGrid, Stack, StackDivider, Text, useColorModeValue, Image } from "@chakra-ui/react";
 import { FaEthereum, FaDiscord, FaReddit, FaYoutube } from "react-icons/fa";
 import { IoLogoBitcoin } from "react-icons/io5";
-import { Layout, Feature } from "../components";
+import { Layout, Feature } from "@components";
 
 export default function ContactPage() {
   return (
