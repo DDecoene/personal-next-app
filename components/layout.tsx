@@ -1,4 +1,4 @@
-import { VStack } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import React, { ReactNode } from "react";
 import { Meta, Footer, Nav } from ".";
 
@@ -13,7 +13,9 @@ export function Layout({ children, title = '' }: Props) {
     <>
       <Meta title={'DDecoene - ' + title} />
       <header><Nav /></header>
-      <main>{children}</main>
+      <Box minH={'80vh'}>
+        <main>{children}</main>
+      </Box>
       <Footer />
     </>
   )

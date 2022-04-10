@@ -2,13 +2,15 @@ import {
     Box,
     chakra,
     Container,
+    Link,
     Stack,
     Text,
     useColorModeValue,
     VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaReddit, FaTwitter, FaYoutube } from 'react-icons/fa';
 import { ReactNode } from 'react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 const SocialButton = ({
     children,
@@ -54,16 +56,22 @@ export function Footer() {
                 spacing={4}
                 justify={{ base: 'center', md: 'space-between' }}
                 align={{ base: 'center', md: 'center' }}>
-                <Text>© 2022 Chakra Templates. All rights reserved</Text>
+                <Text>© 2022 Dennis Decoene. Heavily inspired by&nbsp;
+                    <Link href='https://chakra-ui.com' isExternal>
+                        Chakra Design system <ExternalLinkIcon mx='2px' />
+                    </Link> and&nbsp;
+                    <Link href='https://chakra-templates.dev/' isExternal>Chakra Templates<ExternalLinkIcon mx='2px' />
+                    </Link>. All rights reserved
+                </Text>
                 <Stack direction={'row'} spacing={6}>
-                    <SocialButton label={'Twitter'} href={'#'}>
+                    <SocialButton label={'Twitter'} href={'https://twitter.com/DDecoene'}>
                         <FaTwitter />
                     </SocialButton>
-                    <SocialButton label={'YouTube'} href={'#'}>
+                    <SocialButton label={'YouTube'} href={'https://www.youtube.com/c/DennisDecoene'}>
                         <FaYoutube />
                     </SocialButton>
-                    <SocialButton label={'Instagram'} href={'#'}>
-                        <FaInstagram />
+                    <SocialButton label={'Reddit'} href={'https://www.reddit.com/user/MidnightBolt'}>
+                        <FaReddit />
                     </SocialButton>
                 </Stack>
             </Container>
